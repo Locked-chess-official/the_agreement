@@ -15,12 +15,12 @@ resisted_actions = [
     'broke your clouth']
 
 def protection_female_func(func: Callable[[Any], Any], withdraw_probability=0.5) -> Callable[[Any], Any]:
-    '''
+    """
     This is a decorator that makes a function agree to be called with a certain probability.
     It simulated a small part of females'action in China.
     :param func: the function to be wrapped
-    :param resist_probability: the probability of the function disagree to be called
-    '''
+    :param withdraw_probability: the probability of the function disagree to be called
+    """
     if not 0 <= withdraw_probability <= 1:
         raise ValueError('the probability must be between 0 and 1.')
     agree_to_call = True
