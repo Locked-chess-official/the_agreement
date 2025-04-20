@@ -1,7 +1,11 @@
 # the_agreement
 This is a program that simulate the difficuty of the male in China now. You can run or import the program and decoration your function.
 ## How to install?
-Now it doesn't on pypi. You can git it.
+pip:
+```
+pip install the_agreement
+```
+git:
 ```
 git clone https://github.com/Locked-chess-official/the_agreement
 ```
