@@ -14,10 +14,12 @@ resisted_actions = [
     'left out',
     'broke your clouth']
 
-def protection_female_func(func: Callable[[Any], Any], withdraw_probability=0.5) -> Callable[[Any], Any]:
+def protection_female_func(func: Callable[[...], Any], withdraw_probability: float=0.5) -> Callable[[...], Any]:
     """
     This is a decorator that makes a function agree to be called with a certain probability.
     It simulated a small part of females'action in China.
+    Before you call the function, you will be afraid of that whether it will withdraw the agreement.
+    If it withdraws, you will face to be identified as a "rapist".
     :param func: the function to be wrapped
     :param withdraw_probability: the probability of the function disagree to be called
     """
@@ -44,7 +46,17 @@ It's a difficult question.''')
         return func(*args, **kwargs)
     return female_func
 
-def protection_female_wrap(withdraw_probability: float=0.5) -> Callable[[Any], Callable[[Any], Any]]:
+def protection_female_wrap(withdraw_probability: float = 0.5) -> Callable[[Callable[[...], Any]], Callable[[...], Any]]:
+    """
+    The entrance of the decorator.
+    example:
+    ```
+    @the_agreement.protection_female_wrap(0.5)
+    def some_function():
+        ...
+    ```
+    :param withdraw_probability: the probability of the function disagree to be called
+    """
     return partial(protection_female_func, withdraw_probability=withdraw_probability)
 
 if __name__ == '__main__':
