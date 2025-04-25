@@ -1,7 +1,7 @@
 # the_agreement
 <pre>
 This is a program that simulate the difficuty of the male in China now. You can run or import the program and decoration your function.
-In China, the male are facing to be a "rapist" if they have stayed with the female without the physical evidenct, just like the female_func in the program.
+In China, the male are facing to be a "rapist" if they have stayed with the female without the physical evidence, just like the female_func in the program.
 </pre>
 ## How to install?
 pip:
